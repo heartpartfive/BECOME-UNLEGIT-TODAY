@@ -1,0 +1,15 @@
+local lighting = game.Lighting
+lighting.Spring:Remove()
+
+local sunray = Instance.new("Sky", lighting)
+        local sky = lighting.Sky
+        sky.SkyboxBk = "rbxassetid://2673271663"
+        sky.SkyboxDn = "rbxassetid://2673271148"
+        sky.SkyboxFt = "rbxassetid://2673271285"
+        sky.SkyboxLf = "rbxassetid://2673270998"
+        sky.SkyboxRt = "rbxassetid://2673271813"
+        sky.SkyboxUp = "rbxassetid://2673271464"
+
+        sky.StarCount = 500
+        sky.SunAngularSize = 12
+        sky.MoonAngularSize = 1.5
