@@ -1,0 +1,18 @@
+NeverSitting = not NeverSitting
+	if NeverSitting then 
+		local workspaceChildren = workspace:GetDescendants()
+		for i = 1,#workspaceChildren do 
+			local Child = workspaceChildren[i]
+			if string.find(Child.ClassName:lower(),"seat") then
+				Child.Parent = CoreGui
+			end
+		end
+	else
+		local CoreGuiDescendants = CoreGui:GetDescendants() 
+		for i = 1,#CoreGuiDescendants do 
+			local Child = CoreGuiDescendants[i]
+			if string.find(Child.ClassName:lower(),"seat") then 
+				Child.Parent = workspace
+			end
+		end
+end
